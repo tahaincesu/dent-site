@@ -191,32 +191,46 @@
             </div>
             <ul class="nav-links">
                 <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
-                <li class="dropdown">
-                    <a href="#tedaviler" class="dropdown-toggle">Tedaviler</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="tedavi-lamine-dis.html">Lamine Diş</a></li>
-                        <li><a href="tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
-                        <li><a href="tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
-                        <li><a href="tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
-                        <li><a href="tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
-                        <li><a href="tedavi-total-bakim.html">Total Bakım</a></li>
-                        <li><a href="tedavi-implant.html">Diş İmplantı</a></li>
-                        <li><a href="tedavi-ortodonti.html">Ortodonti</a></li>
-                        <li><a href="tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
-                        <li><a href="tedavi-kanal.html">Kanal Tedavisi</a></li>
-                        <li><a href="tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
-                        <li><a href="tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#randevu">Randevu Al</a></li>
-                <li><a href="index.html#iletisim">İletişim</a></li>
+                <li><a href="../index.html#tedaviler">Tedaviler</a></li>
+                <li><a href="../index.html#iletisim">İletişim</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="dropdown-menu-trigger" id="dropdownMenuTrigger" tabindex="0" aria-label="Menü Aç/Kapat">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="dropdown-menu-panel" id="dropdownMenuPanel">
+                <ul>
+                    <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle" id="dropdownTedavilerToggle">Tedaviler <span class="submenu-arrow">&#9662;</span></button>
+                        <ul class="submenu" id="dropdownTedavilerSubmenu">
+                            <li><a href="tedavi-lamine-dis.html">Lamine Diş</a></li>
+                            <li><a href="tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                            <li><a href="tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                            <li><a href="tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                            <li><a href="tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                            <li><a href="tedavi-total-bakim.html">Total Bakım</a></li>
+                            <li><a href="tedavi-implant.html">Diş İmplantı</a></li>
+                            <li><a href="tedavi-ortodonti.html">Ortodonti</a></li>
+                            <li><a href="tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                            <li><a href="tedavi-kanal.html">Kanal Tedavisi</a></li>
+                            <li><a href="tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                            <li><a href="tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#iletisim">İletişim</a></li>
+                </ul>
             </div>
         </nav>
+        <div class="mobile-menu-overlay" style="display:none;">
+            <div class="mobile-menu">
+                <button class="mobile-menu-close" aria-label="Menüyü Kapat">&times;</button>
+                <ul class="main-links">
+                    <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                    <li><span class="mobile-tedaviler-title">Tedaviler</span></li>
+                    <li><a href="../index.html#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
     <div class="tedavi-container" data-aos="fade-up">
         <main class="tedavi-main">

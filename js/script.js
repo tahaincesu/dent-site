@@ -171,7 +171,6 @@ function setupModernMobileMenu() {
     const closeBtn = document.querySelector('.mobile-menu-close');
     const submenuToggle = document.querySelector('.submenu-toggle');
     const submenu = document.querySelector('.submenu');
-    const mainLinks = document.querySelector('.main-links');
     // Hamburger menüye tıklayınca menü açılır
     if (burger && overlay && mobileMenu) {
         burger.addEventListener('click', () => {
@@ -186,36 +185,17 @@ function setupModernMobileMenu() {
         document.body.style.overflow = '';
         if (submenu) submenu.classList.remove('active');
         if (submenuToggle) submenuToggle.classList.remove('open');
-        if (mainLinks) mainLinks.classList.remove('submenu-open');
-        // Geri butonunu kaldır
-        const backBtn = document.querySelector('.submenu-back');
-        if (backBtn) backBtn.remove();
     }
     if (closeBtn) closeBtn.addEventListener('click', closeMenu);
     if (overlay) overlay.addEventListener('click', function(e) {
         if (e.target === overlay) closeMenu();
     });
-    // Tedaviler'e tıklayınca sadece tedavi alt menüsü göster
-    if (submenuToggle && submenu && mainLinks) {
+    // Tedaviler başlığına tıklayınca alt menü açılır/kapanır
+    if (submenuToggle && submenu) {
         submenuToggle.addEventListener('click', function(e) {
             e.preventDefault();
-            mainLinks.classList.add('submenu-open');
-            submenu.classList.add('active');
-            submenuToggle.classList.add('open');
-            // Geri butonu ekle
-            if (!document.querySelector('.submenu-back')) {
-                const backBtn = document.createElement('button');
-                backBtn.textContent = '← Geri';
-                backBtn.className = 'submenu-back';
-                backBtn.style.cssText = 'margin-bottom:1rem;font-size:1.1rem;background:none;border:none;color:#223046;font-weight:600;cursor:pointer;';
-                submenu.parentNode.insertBefore(backBtn, submenu);
-                backBtn.addEventListener('click', function() {
-                    mainLinks.classList.remove('submenu-open');
-                    submenu.classList.remove('active');
-                    submenuToggle.classList.remove('open');
-                    backBtn.remove();
-                });
-            }
+            submenu.classList.toggle('active');
+            submenuToggle.classList.toggle('open');
         });
     }
     // Menüde bir linke tıklanınca menü kapanır
@@ -223,4 +203,49 @@ function setupModernMobileMenu() {
         link.addEventListener('click', closeMenu);
     });
 }
-window.addEventListener('DOMContentLoaded', setupModernMobileMenu); 
+window.addEventListener('DOMContentLoaded', setupModernMobileMenu);
+
+// Sağ üstte açılır menü fonksiyonu
+function setupDropdownMenuPanel() {
+  const trigger = document.getElementById('dropdownMenuTrigger');
+  const panel = document.getElementById('dropdownMenuPanel');
+  const tedavilerToggle = document.getElementById('dropdownTedavilerToggle');
+  const tedavilerSubmenu = document.getElementById('dropdownTedavilerSubmenu');
+
+  function closePanel() {
+    panel.classList.remove('open');
+    if (tedavilerSubmenu) tedavilerSubmenu.classList.remove('open');
+    if (tedavilerToggle) tedavilerToggle.classList.remove('open');
+  }
+
+  if (trigger && panel) {
+    trigger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      panel.classList.toggle('open');
+    });
+  }
+  if (tedavilerToggle && tedavilerSubmenu) {
+    tedavilerToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      tedavilerSubmenu.classList.toggle('open');
+      tedavilerToggle.classList.toggle('open');
+    });
+  }
+  // Panel dışında bir yere tıklanınca menü kapanır
+  document.addEventListener('click', function(e) {
+    if (panel.classList.contains('open')) {
+      if (!panel.contains(e.target) && e.target !== trigger) {
+        closePanel();
+      }
+    }
+  });
+  // ESC ile menü kapanır
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closePanel();
+  });
+  // Menüdeki bir linke tıklanınca menü kapanır
+  panel.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closePanel);
+  });
+}
+window.addEventListener('DOMContentLoaded', setupDropdownMenuPanel); 

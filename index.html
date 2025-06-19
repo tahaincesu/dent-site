@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keçiören Dent - Diş Kliniği</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
@@ -19,41 +19,19 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#anasayfa">Ana Sayfa</a></li>
-                <li class="dropdown">
-                    <a href="#tedaviler" class="dropdown-toggle">Tedaviler</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="pages/tedavi-lamine-dis.html">Lamine Diş</a></li>
-                        <li><a href="pages/tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
-                        <li><a href="pages/tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
-                        <li><a href="pages/tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
-                        <li><a href="pages/tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
-                        <li><a href="pages/tedavi-total-bakim.html">Total Bakım</a></li>
-                        <li><a href="pages/tedavi-implant.html">Diş İmplantı</a></li>
-                        <li><a href="pages/tedavi-ortodonti.html">Ortodonti</a></li>
-                        <li><a href="pages/tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
-                        <li><a href="pages/tedavi-kanal.html">Kanal Tedavisi</a></li>
-                        <li><a href="pages/tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
-                        <li><a href="pages/tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
-                    </ul>
-                </li>
-                <li><a href="#randevu">Randevu Al</a></li>
+                <li><a href="#tedaviler">Tedaviler</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <!-- Sağ üstte açılır menü ikonu ve paneli -->
+            <div class="dropdown-menu-trigger" id="dropdownMenuTrigger" tabindex="0" aria-label="Menü Aç/Kapat">
+                <i class="fas fa-bars"></i>
             </div>
-        </nav>
-        <!-- Mobil Menü Overlay ve Panel -->
-        <div class="mobile-menu-overlay" style="display:none;">
-            <div class="mobile-menu">
-                <button class="mobile-menu-close" aria-label="Menüyü Kapat">&times;</button>
-                <ul class="main-links">
+            <div class="dropdown-menu-panel" id="dropdownMenuPanel">
+                <ul>
                     <li><a href="#anasayfa">Ana Sayfa</a></li>
                     <li class="has-submenu">
-                        <button class="submenu-toggle">Tedaviler <span class="submenu-arrow">&#9662;</span></button>
-                        <ul class="submenu">
+                        <button class="submenu-toggle" id="dropdownTedavilerToggle">Tedaviler <span class="submenu-arrow">&#9662;</span></button>
+                        <ul class="submenu" id="dropdownTedavilerSubmenu">
                             <li><a href="pages/tedavi-lamine-dis.html">Lamine Diş</a></li>
                             <li><a href="pages/tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
                             <li><a href="pages/tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
@@ -68,34 +46,10 @@
                             <li><a href="pages/tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
                         </ul>
                     </li>
-                    <li><a href="#randevu">Randevu Al</a></li>
                     <li><a href="#iletisim">İletişim</a></li>
                 </ul>
             </div>
-        </div>
-        <style>
-        @media screen and (max-width: 900px) {
-          .mobile-menu .submenu,
-          .main-links .submenu {
-            display: none !important;
-            visibility: hidden !important;
-            height: 0 !important;
-            overflow: hidden !important;
-            padding: 0 !important;
-            margin: 0 !important;
-          }
-          .mobile-menu .submenu.active,
-          .main-links .submenu.active {
-            display: flex !important;
-            visibility: visible !important;
-            height: auto !important;
-            padding: 0.2rem 0 0.2rem 1.1rem !important;
-            margin: 0 !important;
-            flex-direction: column;
-            gap: 0.3rem;
-          }
-        }
-        </style>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -103,7 +57,7 @@
         <div class="hero-content">
             <h1>Gülüşünüz Bizim İşimiz</h1>
             <p>Profesyonel diş sağlığı hizmetleri için yanınızdayız</p>
-            <a href="#randevu" class="cta-button">Randevu Al</a>
+            <a href="#iletisim" class="cta-button">İletişim</a>
         </div>
     </section>
 
@@ -131,7 +85,7 @@
         </div>
     </section>
 
-    <!-- Tedaviler Section -->
+    <!-- Tedaviler Section (geri eklendi) -->
     <section id="tedaviler" class="treatments reveal" data-aos="fade-up">
         <h2>Tedavilerimiz</h2>
         <div class="treatments-grid">
@@ -195,50 +149,6 @@
                 <h3>Çocuk Diş Hekimliği</h3>
                 <p>Çocuklara özel diş tedavileri</p>
             </div></a>
-        </div>
-    </section>
-
-    <!-- Randevu Section -->
-    <section id="randevu" class="appointment reveal" data-aos="fade-up">
-        <div class="appointment-flex">
-            <div class="appointment-image">
-                <img src="assets/images/basvuru.png" alt="Başvuru Görseli" />
-            </div>
-            <div class="appointment-form-wrapper">
-                <h2 class="appointment-title reveal">Randevu Al</h2>
-                <form id="appointment-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder="Adınız Soyadınız">
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" required placeholder="Telefon Numaranız">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder="E-posta Adresiniz">
-                    </div>
-                    <div class="form-group">
-                        <input type="date" id="date" name="date" required>
-                    </div>
-                    <div class="form-group">
-                        <select id="service" name="service" required>
-                            <option value="">Tedavi Seçiniz</option>
-                            <option value="lamine">Lamine Diş</option>
-                            <option value="zirkonyum">Zirkonyum Kaplama</option>
-                            <option value="porselen">Porselen Kaplama</option>
-                            <option value="beyazlatma">Diş Beyazlatma</option>
-                            <option value="diseti">Diş Eti Tedavisi</option>
-                            <option value="total">Total Bakım</option>
-                            <option value="implant">Diş İmplantı</option>
-                            <option value="ortodonti">Ortodonti</option>
-                            <option value="gulus">Gülüş Tasarım</option>
-                            <option value="kanal">Kanal Tedavisi</option>
-                            <option value="estetik">Estetik Diş Hekimliği</option>
-                            <option value="cocuk">Çocuk Diş Hekimliği</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="submit-button">Randevu Oluştur</button>
-                </form>
-            </div>
         </div>
     </section>
 

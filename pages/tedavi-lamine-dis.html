@@ -239,6 +239,27 @@
                 max-width: 100%;
             }
         }
+        .dropdown-menu-panel .submenu {
+            flex-direction: column;
+            background: #f7fafd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+            margin: 0.1rem 0 0 0.7rem;
+            padding: 0.2rem 0.2rem;
+            min-width: 180px;
+            position: static;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 1.2s cubic-bezier(.4,2,.3,1), opacity 0.9s cubic-bezier(.4,2,.3,1);
+            display: flex;
+        }
+        .dropdown-menu-panel .submenu.open {
+            max-height: 500px;
+            opacity: 1;
+            transition: max-height 1.2s cubic-bezier(.4,2,.3,1), opacity 0.9s cubic-bezier(.4,2,.3,1);
+            display: flex;
+        }
     </style>
 </head>
 <body style="background:#f7fafd;">
@@ -251,32 +272,51 @@
             </div>
             <ul class="nav-links">
                 <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
-                <li class="dropdown">
-                    <a href="#tedaviler" class="dropdown-toggle">Tedaviler</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="tedavi-lamine-dis.html">Lamine Diş</a></li>
-                        <li><a href="pages/tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
-                        <li><a href="pages/tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
-                        <li><a href="pages/tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
-                        <li><a href="pages/tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
-                        <li><a href="pages/tedavi-total-bakim.html">Total Bakım</a></li>
-                        <li><a href="pages/tedavi-implant.html">Diş İmplantı</a></li>
-                        <li><a href="pages/tedavi-ortodonti.html">Ortodonti</a></li>
-                        <li><a href="pages/tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
-                        <li><a href="pages/tedavi-kanal.html">Kanal Tedavisi</a></li>
-                        <li><a href="pages/tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
-                        <li><a href="pages/tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#randevu">Randevu Al</a></li>
-                <li><a href="index.html#iletisim">İletişim</a></li>
+                <li><a href="../index.html#tedaviler">Tedaviler</a></li>
+                <li><a href="../index.html#iletisim">İletişim</a></li>
             </ul>
+            <div class="dropdown-menu-trigger" id="dropdownMenuTrigger" tabindex="0" aria-label="Menü Aç/Kapat">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="dropdown-menu-panel" id="dropdownMenuPanel">
+                <ul>
+                    <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle" id="dropdownTedavilerToggle">Tedaviler <span class="submenu-arrow">&#9662;</span></button>
+                        <ul class="submenu" id="dropdownTedavilerSubmenu">
+                            <li><a href="tedavi-lamine-dis.html">Lamine Diş</a></li>
+                            <li><a href="tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                            <li><a href="tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                            <li><a href="tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                            <li><a href="tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                            <li><a href="tedavi-total-bakim.html">Total Bakım</a></li>
+                            <li><a href="tedavi-implant.html">Diş İmplantı</a></li>
+                            <li><a href="tedavi-ortodonti.html">Ortodonti</a></li>
+                            <li><a href="tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                            <li><a href="tedavi-kanal.html">Kanal Tedavisi</a></li>
+                            <li><a href="tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                            <li><a href="tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#iletisim">İletişim</a></li>
+                </ul>
+            </div>
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
             </div>
         </nav>
+        <div class="mobile-menu-overlay" style="display:none;">
+            <div class="mobile-menu">
+                <button class="mobile-menu-close" aria-label="Menüyü Kapat">&times;</button>
+                <ul class="main-links">
+                    <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                    <li><span class="mobile-tedaviler-title">Tedaviler</span></li>
+                    <li><a href="../index.html#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
     <div class="tedavi-container" data-aos="fade-up">
         <main class="tedavi-main">
@@ -311,17 +351,17 @@ Dişlerinizin görünümünü iyileştirmek ve gülümsemenizi güzelleştirmek 
         <aside class="tedavi-sidebar modern-sidebar">
             <h3>Diğer Tedaviler</h3>
             <ul class="tedavi-list">
-                <li><a href="pages/tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
-                <li><a href="pages/tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
-                <li><a href="pages/tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
-                <li><a href="pages/tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
-                <li><a href="pages/tedavi-total-bakim.html">Total Bakım</a></li>
-                <li><a href="pages/tedavi-implant.html">Diş İmplantı</a></li>
-                <li><a href="pages/tedavi-ortodonti.html">Ortodonti</a></li>
-                <li><a href="pages/tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
-                <li><a href="pages/tedavi-kanal.html">Kanal Tedavisi</a></li>
-                <li><a href="pages/tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
-                <li><a href="pages/tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+                <li><a href="tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                <li><a href="tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                <li><a href="tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                <li><a href="tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                <li><a href="tedavi-total-bakim.html">Total Bakım</a></li>
+                <li><a href="tedavi-implant.html">Diş İmplantı</a></li>
+                <li><a href="tedavi-ortodonti.html">Ortodonti</a></li>
+                <li><a href="tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                <li><a href="tedavi-kanal.html">Kanal Tedavisi</a></li>
+                <li><a href="tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                <li><a href="tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
             </ul>
         </aside>
     </div>
