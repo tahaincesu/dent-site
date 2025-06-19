@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Bakım | Keçiören Dent</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <style>/* Lamine diş sayfasındakiyle aynı stiller buraya */
+        .tedavi-container { display: flex; flex-wrap: wrap; max-width: 1200px; margin: 40px auto 0 auto; gap: 2rem; padding: 2rem 1rem; }
+        .tedavi-main { flex: 1 1 60%; min-width: 320px; background: #fff; border-radius: 16px; box-shadow: 0 3px 15px rgba(44,62,80,0.08); padding: 2rem; }
+        .tedavi-main img { width: 100%; max-height: 340px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; }
+        .tedavi-main h1 { color: #2c3e50; font-size: 2.2rem; margin-bottom: 1.2rem; }
+        .tedavi-main p { color: #444; font-size: 1.15rem; line-height: 1.8; margin-bottom: 1.2rem; }
+        .tedavi-sidebar { flex: 1 1 280px; min-width: 240px; background: #f9f9f9; border-radius: 16px; box-shadow: 0 3px 15px rgba(44,62,80,0.06); padding: 2rem 1.2rem; height: fit-content; }
+        .tedavi-sidebar h3 { color: #2c3e50; font-size: 1.2rem; margin-bottom: 1.2rem; }
+        .tedavi-list { list-style: none; padding: 0; }
+        .tedavi-list li { margin-bottom: 1.1rem; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(44,62,80,0.06); transition: box-shadow 0.2s, transform 0.2s; padding: 0.5rem 0.8rem; display: flex; align-items: center; }
+        .tedavi-list li:hover { box-shadow: 0 4px 16px rgba(52,152,219,0.13); transform: translateY(-2px) scale(1.03); }
+        .tedavi-icon { display: none; }
+        .modern-sidebar { margin-top: 2.5rem; background: linear-gradient(135deg, #f7fafd 60%, #e3f0fc 100%); box-shadow: 0 6px 24px rgba(52,152,219,0.08); border: 1.5px solid #e3f0fc; }
+        .modern-footer { position: relative; background: #fff; margin-top: 4rem; padding: 0; overflow: hidden; border-top: 2px solid #e3f0fc; }
+        .footer-bg { position: absolute; inset: 0; background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(120deg, #f7fafd 60%, #fdf6e3 100%); opacity: 0.18; z-index: 1; }
+        .footer-content { position: relative; z-index: 2; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2.5rem; max-width: 1200px; margin: 0 auto; padding: 3.5rem 1.5rem 2.5rem 1.5rem; text-align: center; }
+        .footer-col { flex: 1 1 260px; min-width: 220px; max-width: 350px; color: #222; display: flex; flex-direction: column; align-items: center; }
+        .footer-col h3 { color: #223046; font-size: 1.45rem; margin-bottom: 1.2rem; font-weight: 700; text-align: center; }
+        .footer-contact-item { margin-bottom: 1.1rem; font-size: 1.08rem; display: flex; align-items: center; gap: 0.5rem; justify-content: center; }
+        .footer-contact-item i { color: #2d9cdb; font-size: 1.2rem; margin-top: 0.2rem; }
+        .footer-links-list { list-style: none; padding: 0; margin: 0; text-align: center; }
+        .footer-links-list li { margin-bottom: 0.9rem; display: flex; justify-content: center; }
+        .footer-links-list a { color: #223046; text-decoration: none; font-size: 1.08rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s; }
+        .footer-links-list a:hover { color: #2d9cdb; }
+        @media (max-width: 900px) { .tedavi-container { flex-direction: column; gap: 1.5rem; } .tedavi-sidebar { width: 100%; } .footer-content { flex-direction: column; gap: 2rem; padding: 2.5rem 1rem 1.5rem 1rem; } .footer-col { max-width: 100%; } }
+    </style>
+</head>
+<body style="background:#f7fafd;">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo2.png" alt="Keçiören Dent Logo" class="logo-img" />
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                <li class="dropdown">
+                    <a href="#tedaviler" class="dropdown-toggle">Tedaviler</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="tedavi-lamine-dis.html">Lamine Diş</a></li>
+                        <li><a href="tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                        <li><a href="tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                        <li><a href="tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                        <li><a href="tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                        <li><a href="tedavi-total-bakim.html">Total Bakım</a></li>
+                        <li><a href="tedavi-implant.html">Diş İmplantı</a></li>
+                        <li><a href="tedavi-ortodonti.html">Ortodonti</a></li>
+                        <li><a href="tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                        <li><a href="tedavi-kanal.html">Kanal Tedavisi</a></li>
+                        <li><a href="tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                        <li><a href="tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#randevu">Randevu Al</a></li>
+                <li><a href="index.html#iletisim">İletişim</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="tedavi-container" data-aos="fade-up">
+        <main class="tedavi-main">
+            <img src="../assets/images/total-bakim.jpg" alt="Total Bakım">
+            <h1>Total Bakım</h1>
+            <p>
+                Keçiören Dent Ağız ve Diş Sağlığı Polikliniği, Ankara'nın Keçiören ilçesinde faaliyet gösteren, güvenilir ve deneyimli bir diş sağlığı merkezidir. Kliniğimiz, bölgedeki en kapsamlı ve modern diş tedavi hizmetlerini sunan lider bir sağlık kuruluşudur. Uzman kadromuz ve en son teknolojik donanımlarımızla, hastalarımızın en yüksek standartlarda diş bakımını almasını sağlıyoruz.
+            </p>
+            <p>
+                Keçiören Dent, yıllar içinde geliştirdiği bütüncül yaklaşımı ve hasta odaklı hizmet anlayışıyla, bölgede öne çıkan bir diş sağlığı merkezi haline gelmiştir. Kliniğimizde, diş hekimlerimiz, diş teknisyenlerimiz ve yardımcı personelimiz, hastalarımızın ihtiyaçlarını en üst düzeyde karşılamak için ekip halinde çalışmaktadır.
+            </p>
+            <p>
+                Biz, Keçiören Dent olarak, sağlıklı ve güzel bir gülümseme için gerekli tüm hizmetleri bir arada sunuyoruz. Kliniğimizde, protetik tedaviler, estetik diş hekimliği, ortodonti, çocuk diş hekimliği, diş eti tedavileri ve daha birçok alanda uzman hizmetler alabilirsiniz. Hasta memnuniyetini her zaman ön planda tutan yaklaşımımızla, sizlere en iyi deneyimi yaşatmayı hedefliyoruz.
+            </p>
+            <h2>Total Bakım nedir ve nasıl yapılır?</h2>
+            <p>
+                Total Bakım, diş sağlığının korunması ve geliştirilmesi için kapsamlı bir yaklaşımdır. Bu hizmet, diş hekimi kontrollerinden, günlük ev bakımına kadar tüm diş sağlığı ihtiyaçlarınızı karşılamayı amaçlar.
+            </p>
+            <h3>Total Bakım süreci şu adımlardan oluşur:</h3>
+            <ul style="text-align:left; margin: 1rem 0 1.5rem 1.2rem;">
+                <li><b>Düzenli Diş Hekimi Kontrolleri:</b> Yılda en az iki kez diş hekiminizle görüşerek, ağız ve diş sağlığınızın durumunu değerlendirirsiniz. Diş hekiminiz, gerekli muayeneleri ve tetkikleri yaparak, herhangi bir sorun olup olmadığını tespit eder.</li>
+                <li><b>Profesyonel Diş Temizliği:</b> Diş hekimi kontrollerinin ardından, diş hijyenistimiz tarafından profesyonel diş temizliği işlemi gerçekleştirilir. Bu işlem, plak ve diş taşlarının temizlenmesini, dişlerin parlatılmasını ve dişetlerinin sağlıklı hale getirilmesini kapsar.</li>
+                <li><b>Ev Bakımı Eğitimi:</b> Diş hekiminiz, size günlük ev bakımı konusunda öneriler sunar. Doğru diş fırçalama, floss kullanma ve ağız bakım ürünlerinin seçimi gibi konularda size rehberlik eder.</li>
+                <li><b>Koruyucu Tedaviler:</b> Diş çürüklerini ve diş eti hastalıklarını önlemek amacıyla, gerekli koruyucu tedaviler uygulanır. Bunlar arasında florür uygulamaları, çürük önleyici dolgu malzemeleri ve diş eti tedavileri yer alır.</li>
+                <li><b>Erken Teşhis ve Tedavi:</b> Düzenli kontroller sayesinde, herhangi bir sorun erken aşamada tespit edilir. Bu sayede, daha az invaziv ve daha ekonomik tedaviler uygulanabilir.</li>
+            </ul>
+            <p>
+                Total Bakım, diş sağlığınızı korumak ve geliştirmek için en etkin yöntemdir. Düzenli kontroller, profesyonel temizlik ve ev bakımı eğitimi ile, sağlıklı ve güzel bir gülümsemeye sahip olabilirsiniz.
+            </p>
+            <p>
+                Sağlıklı ve güzel bir gülümseme için, Keçiören Dent Ağız ve Diş Sağlığı Polikliniği'nde Total Bakım hizmetlerinden yararlanın.
+            </p>
+        </main>
+        <aside class="tedavi-sidebar modern-sidebar">
+            <h3>Diğer Tedaviler</h3>
+            <ul class="tedavi-list">
+                <li><a href="tedavi-lamine-dis.html">Lamine Diş</a></li>
+                <li><a href="tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                <li><a href="tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                <li><a href="tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                <li><a href="tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                <li><a href="tedavi-implant.html">Diş İmplantı</a></li>
+                <li><a href="tedavi-ortodonti.html">Ortodonti</a></li>
+                <li><a href="tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                <li><a href="tedavi-kanal.html">Kanal Tedavisi</a></li>
+                <li><a href="tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                <li><a href="tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer class="modern-footer" data-aos="fade-up">
+        <div class="footer-bg"></div>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Bize Ulaşın</h3>
+                <p>Sizlere en iyi ağız ve diş sağlığı hizmetini sunmak için buradayız.</p>
+                <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> Etlik caddesi 191<br>Keçiören/ANKARA</div>
+                <div class="footer-contact-item"><i class="fas fa-phone"></i> 0 552 183 90 18<br>0 552 183 90 19</div>
+                <div class="footer-contact-item"><i class="fas fa-envelope"></i> info@etlikdent.com</div>
+            </div>
+            <div class="footer-col">
+                <h3>Site Bağlantıları</h3>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#anasayfa"><i class="fas fa-chevron-right"></i> Anasayfa</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Hakkımızda</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Kliniğimiz</a></li>
+                    <li><a href="index.html#tedaviler"><i class="fas fa-chevron-right"></i> Tedavilerimiz</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Medya</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                    <li><a href="index.html#iletisim"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Tedavilerimiz</h3>
+                <ul class="footer-links-list">
+                    <li><a href="tedavi-lamine-dis.html"><i class="fas fa-chevron-right"></i> Lamine Diş</a></li>
+                    <li><a href="tedavi-cocuk.html"><i class="fas fa-chevron-right"></i> Çocuk Diş Hekimliği</a></li>
+                    <li><a href="tedavi-estetik.html"><i class="fas fa-chevron-right"></i> Estetik Diş Hekimliği</a></li>
+                    <li><a href="tedavi-kanal.html"><i class="fas fa-chevron-right"></i> Kanal Tedavisi</a></li>
+                    <li><a href="tedavi-gulus-tasarim.html"><i class="fas fa-chevron-right"></i> Gülüş Tasarım</a></li>
+                    <li><a href="tedavi-ortodonti.html"><i class="fas fa-chevron-right"></i> Ortodonti</a></li>
+                    <li><a href="tedavi-implant.html"><i class="fas fa-chevron-right"></i> Diş İmplantı</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({duration: 900, once: true});</script>
+</body>
+</html> 

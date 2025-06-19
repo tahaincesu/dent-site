@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keçiören Dent - Diş Kliniği</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo2.png" alt="Keçiören Dent Logo" class="logo-img" />
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li class="dropdown">
+                    <a href="#tedaviler" class="dropdown-toggle">Tedaviler</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="pages/tedavi-lamine-dis.html">Lamine Diş</a></li>
+                        <li><a href="pages/tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                        <li><a href="pages/tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                        <li><a href="pages/tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                        <li><a href="pages/tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                        <li><a href="pages/tedavi-total-bakim.html">Total Bakım</a></li>
+                        <li><a href="pages/tedavi-implant.html">Diş İmplantı</a></li>
+                        <li><a href="pages/tedavi-ortodonti.html">Ortodonti</a></li>
+                        <li><a href="pages/tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                        <li><a href="pages/tedavi-kanal.html">Kanal Tedavisi</a></li>
+                        <li><a href="pages/tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                        <li><a href="pages/tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+                    </ul>
+                </li>
+                <li><a href="#randevu">Randevu Al</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+        <!-- Mobil Menü Overlay ve Panel -->
+        <div class="mobile-menu-overlay" style="display:none;">
+            <div class="mobile-menu">
+                <button class="mobile-menu-close" aria-label="Menüyü Kapat">&times;</button>
+                <ul class="main-links">
+                    <li><a href="#anasayfa">Ana Sayfa</a></li>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle">Tedaviler <span class="submenu-arrow">&#9662;</span></button>
+                        <ul class="submenu">
+                            <li><a href="pages/tedavi-lamine-dis.html">Lamine Diş</a></li>
+                            <li><a href="pages/tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                            <li><a href="pages/tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                            <li><a href="pages/tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                            <li><a href="pages/tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                            <li><a href="pages/tedavi-total-bakim.html">Total Bakım</a></li>
+                            <li><a href="pages/tedavi-implant.html">Diş İmplantı</a></li>
+                            <li><a href="pages/tedavi-ortodonti.html">Ortodonti</a></li>
+                            <li><a href="pages/tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                            <li><a href="pages/tedavi-kanal.html">Kanal Tedavisi</a></li>
+                            <li><a href="pages/tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                            <li><a href="pages/tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#randevu">Randevu Al</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <style>
+        @media screen and (max-width: 900px) {
+          .mobile-menu .submenu,
+          .main-links .submenu {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+          .mobile-menu .submenu.active,
+          .main-links .submenu.active {
+            display: flex !important;
+            visibility: visible !important;
+            height: auto !important;
+            padding: 0.2rem 0 0.2rem 1.1rem !important;
+            margin: 0 !important;
+            flex-direction: column;
+            gap: 0.3rem;
+          }
+        }
+        </style>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero reveal" data-aos="fade-up">
+        <div class="hero-content">
+            <h1>Gülüşünüz Bizim İşimiz</h1>
+            <p>Profesyonel diş sağlığı hizmetleri için yanınızdayız</p>
+            <a href="#randevu" class="cta-button">Randevu Al</a>
+        </div>
+    </section>
+
+    <!-- Ana Sayfa İkinci Tanıtım Bölümü -->
+    <section class="home-feature-section" data-aos="fade-up">
+        <div class="home-feature-container">
+            <div class="home-feature-image">
+                <img src="assets/images/anasayfagörsel2.jpg" alt="Etlik Dent Diş Kliniği" />
+            </div>
+            <div class="home-feature-content">
+                <h3 class="feature-title">Diş Sağlığında Güvendiğiniz Adres</h3>
+                <h2 class="feature-headline">Keçiören Dent, diş sağlığı alanında güvenilir bir isimdir ve sağlığınız bizim için en öncelikli konudur.</h2>
+                <p class="feature-desc">Keçiören Dent Ağız ve Diş Sağlığı Polikliniği olarak, hasta memnuniyetini ve sağlığını her şeyin önünde tutuyoruz. Alanında uzman diş hekimlerimizle, lamine diş, zirkonyum ve porselen kaplama, diş beyazlatma, total bakım, diş implantı, ortodonti, gülüş tasarımı, kanal tedavisi, estetik diş hekimliği, diş eti tedavisi ve çocuk diş hekimliği gibi geniş bir yelpazede hizmet sunmaktayız. Modern ve steril ortamımızda, en güncel teknolojileri kullanarak hastalarımıza kaliteli ve kalıcı çözümler sunmayı amaçlıyoruz. Her bir bireyin ihtiyaçlarına özel olarak yaklaşarak, sağlıklı ve estetik gülüşlere kavuşmaları için buradayız. Keçiören Dent ailesi olarak, her yaştan hastamıza güvenli ve konforlu bir tedavi deneyimi yaşatmayı hedefliyoruz.</p>
+                <div class="feature-support-blocks">
+                    <div class="feature-support">
+                        <strong>7/24 Destek</strong>
+                        <p>Uzman diş hekimlerimiz, uzun süreli tedavi gerektiren durumlarda her zaman yanınızda. 7/24 destek hizmetimizle diş sağlığınızı güvence altına alın.</p>
+                    </div>
+                    <div class="feature-support">
+                        <strong>Acil Destek</strong>
+                        <p>Acil durumlar için hazırda bekleyen diş ekibimiz, ihtiyaç duyduğunuz anda hızlı ve etkili çözümler sunar. Güvenle bize ulaşabilirsiniz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tedaviler Section -->
+    <section id="tedaviler" class="treatments reveal" data-aos="fade-up">
+        <h2>Tedavilerimiz</h2>
+        <div class="treatments-grid">
+            <a href="pages/tedavi-lamine-dis.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/lamine-dis-gorsel.jpg" alt="Lamine Diş">
+                <h3>Lamine Diş</h3>
+                <p>Estetik ve ince porselen kaplamalar</p>
+            </div></a>
+            <a href="pages/tedavi-zirkonyum-kaplama.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/zirkonyum.jpg" alt="Zirkonyum Kaplama">
+                <h3>Zirkonyum Kaplama</h3>
+                <p>Dayanıklı ve estetik zirkonyum diş kaplamaları</p>
+            </div></a>
+            <a href="pages/tedavi-porselen-kaplama.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/porselen.jpg" alt="Porselen Kaplama">
+                <h3>Porselen Kaplama</h3>
+                <p>Doğal görünümlü porselen diş kaplamaları</p>
+            </div></a>
+            <a href="pages/tedavi-dis-beyazlatma.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/dis-beyazlatma.jpg" alt="Diş Beyazlatma">
+                <h3>Diş Beyazlatma</h3>
+                <p>Profesyonel diş beyazlatma işlemleri</p>
+            </div></a>
+            <a href="pages/tedavi-dis-eti.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/dis-eti-tedavisi.jpg" alt="Diş Eti Tedavisi">
+                <h3>Diş Eti Tedavisi</h3>
+                <p>Periodontal hastalıkların tedavisi</p>
+            </div></a>
+            <a href="pages/tedavi-total-bakim.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/total-bakim.jpg" alt="Total Bakım">
+                <h3>Total Bakım</h3>
+                <p>Kapsamlı diş sağlığı bakımı</p>
+            </div></a>
+            <a href="pages/tedavi-implant.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/implant.jpg" alt="Diş İmplantı">
+                <h3>Diş İmplantı</h3>
+                <p>Modern implant tedavileri</p>
+            </div></a>
+            <a href="pages/tedavi-ortodonti.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/ortodonti.jpg" alt="Ortodonti">
+                <h3>Ortodonti</h3>
+                <p>Diş ve çene bozukluklarının tedavisi</p>
+            </div></a>
+            <a href="pages/tedavi-gulus-tasarim.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/gulus-tasarim.webp" alt="Gülüş Tasarım">
+                <h3>Gülüş Tasarım</h3>
+                <p>Estetik gülüş tasarımı uygulamaları</p>
+            </div></a>
+            <a href="pages/tedavi-kanal.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/kanal-tadavisi.jpg" alt="Kanal Tedavisi">
+                <h3>Kanal Tedavisi</h3>
+                <p>Kök kanal tedavisi ve diş kurtarma</p>
+            </div></a>
+            <a href="pages/tedavi-estetik.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/estetik dis.jpg" alt="Estetik Diş Hekimliği">
+                <h3>Estetik Diş Hekimliği</h3>
+                <p>Modern estetik diş uygulamaları</p>
+            </div></a>
+            <a href="pages/tedavi-cocuk.html" class="treatment-link"><div class="treatment-card">
+                <img src="assets/images/cocuk dis hekimligi.jpg" alt="Çocuk Diş Hekimliği">
+                <h3>Çocuk Diş Hekimliği</h3>
+                <p>Çocuklara özel diş tedavileri</p>
+            </div></a>
+        </div>
+    </section>
+
+    <!-- Randevu Section -->
+    <section id="randevu" class="appointment reveal" data-aos="fade-up">
+        <div class="appointment-flex">
+            <div class="appointment-image">
+                <img src="assets/images/basvuru.png" alt="Başvuru Görseli" />
+            </div>
+            <div class="appointment-form-wrapper">
+                <h2 class="appointment-title reveal">Randevu Al</h2>
+                <form id="appointment-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Adınız Soyadınız">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" required placeholder="Telefon Numaranız">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="E-posta Adresiniz">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" name="service" required>
+                            <option value="">Tedavi Seçiniz</option>
+                            <option value="lamine">Lamine Diş</option>
+                            <option value="zirkonyum">Zirkonyum Kaplama</option>
+                            <option value="porselen">Porselen Kaplama</option>
+                            <option value="beyazlatma">Diş Beyazlatma</option>
+                            <option value="diseti">Diş Eti Tedavisi</option>
+                            <option value="total">Total Bakım</option>
+                            <option value="implant">Diş İmplantı</option>
+                            <option value="ortodonti">Ortodonti</option>
+                            <option value="gulus">Gülüş Tasarım</option>
+                            <option value="kanal">Kanal Tedavisi</option>
+                            <option value="estetik">Estetik Diş Hekimliği</option>
+                            <option value="cocuk">Çocuk Diş Hekimliği</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Randevu Oluştur</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section id="iletisim" class="contact reveal" data-aos="fade-up">
+        <h2>İletişim</h2>
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Keçiören, Ankara</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p>+90 312 XXX XX XX</p>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <p>info@keciorendent.com</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Keçiören Dent. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({duration: 900, once: true});</script>
+</body>
+</html> 
