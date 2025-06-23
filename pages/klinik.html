@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kliniğimiz - Nis Dental</title>
+    <link rel="stylesheet" href="../css/style.css?v=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .clinic-gallery-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1rem 1.5rem 1rem;
+            padding-top: 120px; /* Header yüksekliği kadar boşluk bırak */
+        }
+        .clinic-gallery-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #2d9cdb;
+            margin-bottom: 0.7rem;
+        }
+        .clinic-gallery-desc {
+            text-align: center;
+            color: #223046;
+            font-size: 1.15rem;
+            margin-bottom: 2.2rem;
+        }
+        .clinic-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 0.7rem;
+        }
+        .clinic-gallery-item {
+            border-radius: 0;
+            box-shadow: none;
+            overflow: visible;
+            transition: none;
+            position: static;
+            padding: 0;
+        }
+        .clinic-gallery-item:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(44,62,80,0.16);
+        }
+        .clinic-gallery-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 18px;
+            transition: filter 0.18s;
+        }
+        @media (max-width: 700px) {
+            .clinic-gallery-title { font-size: 1.3rem; }
+            /* Küçük ekranda da orijinal oran korunsun */
+        }
+        .clinic-gallery-caption {
+            padding: 0.7rem 1rem 0.8rem 1rem;
+            text-align: center;
+            color: #223046;
+            font-size: 1.01rem;
+            font-weight: 500;
+            background: #f7fafd;
+        }
+    </style>
+</head>
+<body style="background:#f7fafd;">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/nisdental-logo.jpg" alt="Nis Dental Logo" class="logo-img" />
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                <li><a href="../index.html#klinik">Kliniğimiz</a></li>
+                <li><a href="../index.html#tedaviler">Tedaviler</a></li>
+                <li><a href="../index.html#iletisim">İletişim</a></li>
+            </ul>
+            <div class="dropdown-menu-trigger" id="dropdownMenuTrigger" tabindex="0" aria-label="Menü Aç/Kapat">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="dropdown-menu-panel" id="dropdownMenuPanel">
+                <ul>
+                    <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                    <li><a href="../index.html#klinik">Kliniğimiz</a></li>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle" id="dropdownTedavilerToggle">Tedaviler <span class="submenu-arrow">&#9662;</span></button>
+                        <ul class="submenu" id="dropdownTedavilerSubmenu">
+                            <li><a href="tedavi-lamine-dis.html">Lamine Diş</a></li>
+                            <li><a href="tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                            <li><a href="tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                            <li><a href="tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                            <li><a href="tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                            <li><a href="tedavi-total-bakim.html">Total Bakım</a></li>
+                            <li><a href="tedavi-implant.html">Diş İmplantı</a></li>
+                            <li><a href="tedavi-ortodonti.html">Ortodonti</a></li>
+                            <li><a href="tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                            <li><a href="tedavi-kanal.html">Kanal Tedavisi</a></li>
+                            <li><a href="tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                            <li><a href="tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="clinic-gallery-container">
+            <h1 class="clinic-gallery-title">Kliniğimizden Kareler</h1>
+            <div class="clinic-gallery-desc">Nis Dental kliniğimizin modern ve konforlu ortamından bazı fotoğraflar. Sizleri de kliniğimizde ağırlamaktan mutluluk duyarız!</div>
+            <div class="clinic-gallery-grid">
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/17088848-1bb9-4ac2-9ebe-0d27582de19a.JPG" alt="Klinik Fotoğrafı 1">
+                </div>
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/1a5d6854-92a0-47c6-b49b-fa7f3d794eb9.JPG" alt="Klinik Fotoğrafı 2">
+                </div>
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/1cf64dd0-f04f-4444-9510-25f4939978c1.JPG" alt="Klinik Fotoğrafı 3">
+                </div>
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/2bc1176b-41d5-4432-908d-254ade80191c.JPG" alt="Klinik Fotoğrafı 4">
+                </div>
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/7b4751f2-c7bd-4d56-9352-0b1efe1a520c.JPG" alt="Klinik Fotoğrafı 5">
+                </div>
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/b46604de-dd8a-47ab-96e0-311a3682078c.JPG" alt="Klinik Fotoğrafı 7">
+                </div>
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/fb15b222-51ae-4b49-8c65-a25b52dcf3bc.JPG" alt="Klinik Fotoğrafı 8">
+                </div>
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/4c557f0f-e9d5-4380-b77c-eb50f2492700.JPG" alt="Klinik Fotoğrafı 9">
+                </div>
+                <div class="clinic-gallery-item">
+                    <img src="../assets/images/klinigimiz/501e52f6-159e-44d1-aa06-6b514a59d042.JPG" alt="Klinik Fotoğrafı 10">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer ve iletişim bölümü -->
+    <footer style="background:#fff; margin-top:2.5rem; border-top:1px solid #e3e3e3;">
+        <div style="max-width:1100px; margin:0 auto; padding:2.2rem 1rem 1.2rem 1rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1.5rem;">
+            <div style="flex:1 1 220px; min-width:180px;">
+                <img src="../assets/images/nisdental-logo.jpg" alt="Nis Dental Logo" style="max-width:150px; margin-bottom:1rem;">
+                <div style="color:#223046; font-size:1.08rem; font-weight:600; margin-bottom:0.5rem;">Nis Dental Ağız ve Diş Sağlığı Polikliniği</div>
+                <div style="color:#3a3a3a; font-size:1rem; margin-bottom:0.3rem;">Şefkat Mahallesi Kızlarpınarı caddesi 64/B KEÇİÖREN ANKARA</div>
+                <div style="color:#3a3a3a; font-size:1rem;">Telefon: <a href="tel:+905325594844" style="color:#2d9cdb; text-decoration:none;">+90 532 559 4844</a></div>
+                <div style="color:#3a3a3a; font-size:1rem;">E-posta: <a href="mailto:info@nisdental@gmail.com" style="color:#2d9cdb; text-decoration:none;">info@nisdental@gmail.com</a></div>
+            </div>
+            <div style="flex:1 1 180px; min-width:160px;">
+                <div style="font-weight:700; color:#223046; margin-bottom:0.7rem;">Site Bağlantıları</div>
+                <ul style="list-style:none; padding:0; margin:0;">
+                    <li style="margin-bottom:0.4rem;"><a href="../index.html#anasayfa" style="color:#2d9cdb; text-decoration:none;">Anasayfa</a></li>
+                    <li style="margin-bottom:0.4rem;"><a href="../index.html#klinik" style="color:#2d9cdb; text-decoration:none;">Kliniğimiz</a></li>
+                    <li style="margin-bottom:0.4rem;"><a href="../index.html#tedaviler" style="color:#2d9cdb; text-decoration:none;">Tedavilerimiz</a></li>
+                    <li><a href="../index.html#iletisim" style="color:#2d9cdb; text-decoration:none;">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align:center; color:#888; font-size:0.98rem; padding-bottom:1.1rem;">&copy; 2025 Nis Dental. Tüm hakları saklıdır.</div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html> 
