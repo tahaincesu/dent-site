@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Nis Dental</title>
+    <link rel="stylesheet" href="../css/style.css?v=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/nisdental-logo.jpg" alt="Nis Dental Logo" class="logo-img" />
+                </a>
+            </div>
+            <div class="dropdown-menu-trigger" id="dropdownMenuTrigger" tabindex="0" aria-label="Menü Aç/Kapat">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="dropdown-menu-panel" id="dropdownMenuPanel">
+                <ul>
+                    <li><a href="../index.html#anasayfa">Ana Sayfa</a></li>
+                    <li><a href="klinik.html">Kliniğimiz</a></li>
+                    <li class="has-submenu">
+                        <button class="submenu-toggle" id="dropdownTedavilerToggle">Tedaviler <span class="submenu-arrow">&#9662;</span></button>
+                        <ul class="submenu" id="dropdownTedavilerSubmenu">
+                            <li><a href="tedavi-lamine-dis.html">Lamine Diş</a></li>
+                            <li><a href="tedavi-zirkonyum-kaplama.html">Zirkonyum Kaplama</a></li>
+                            <li><a href="tedavi-porselen-kaplama.html">Porselen Kaplama</a></li>
+                            <li><a href="tedavi-dis-beyazlatma.html">Diş Beyazlatma</a></li>
+                            <li><a href="tedavi-dis-eti.html">Diş Eti Tedavisi</a></li>
+                            <li><a href="tedavi-total-bakim.html">Total Bakım</a></li>
+                            <li><a href="tedavi-implant.html">Diş İmplantı</a></li>
+                            <li><a href="tedavi-ortodonti.html">Ortodonti</a></li>
+                            <li><a href="tedavi-gulus-tasarim.html">Gülüş Tasarım</a></li>
+                            <li><a href="tedavi-kanal.html">Kanal Tedavisi</a></li>
+                            <li><a href="tedavi-estetik.html">Estetik Diş Hekimliği</a></li>
+                            <li><a href="tedavi-cocuk.html">Çocuk Diş Hekimliği</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-page-section reveal" data-aos="fade-up">
+            <h1 class="contact-title">İletişim</h1>
+            <a href="tel:+905325594844" class="big-phone-box" data-aos="fade-up">
+              <div class="big-phone-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="big-phone-texts">
+                <span class="big-phone-title">Hemen<br>Ara</span>
+              </div>
+              <div class="big-phone-number">
+                <span>+90 532<br>559 4844</span>
+              </div>
+            </a>
+            <div class="contact-address" data-aos="fade-up">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Şefkat Mahallesi Kızlarpınarı caddesi 64/B KEÇİÖREN ANKARA</span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Nis Dental. Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({duration: 900, once: true});</script>
+    <style>
+        .contact-page-section {
+            max-width: 900px;
+            margin: 3.5rem auto 2.5rem auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+            padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+        }
+        .contact-title {
+            text-align: center;
+            font-size: 2.3rem;
+            color: #2d9cdb;
+            margin-bottom: 2.2rem;
+        }
+        .big-phone-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.2rem;
+            background: linear-gradient(90deg, #2d9cdb 0%, #38ef7d 100%);
+            border-radius: 2rem;
+            box-shadow: 0 4px 24px rgba(44,62,80,0.13);
+            padding: 1.2rem 1.8rem;
+            color: #fff;
+            text-decoration: none;
+            transition: box-shadow 0.3s, transform 0.2s;
+            margin: 0 auto 0 auto;
+            max-width: 420px;
+            width: 100%;
+        }
+        .big-phone-box:hover {
+            box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+            transform: translateY(-2px) scale(1.02);
+        }
+        .big-phone-icon {
+            background: rgba(255,255,255,0.13);
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 0.7rem;
+        }
+        .big-phone-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 0.01em;
+        }
+        .big-phone-texts {
+            min-width: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .big-phone-number {
+            background: rgba(255,255,255,0.13);
+            border-radius: 1.2rem;
+            padding: 0.7rem 1.1rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: center;
+            margin-left: 0.7rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (max-width: 700px) {
+            .big-phone-box {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.4rem;
+                padding: 0.6rem 0.2rem 0.8rem 0.2rem;
+                max-width: 95vw;
+                min-height: 120px;
+            }
+            .big-phone-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+                margin: 0 0 0.3rem 0;
+            }
+            .big-phone-title {
+                font-size: 0.95rem;
+                font-weight: 700;
+                margin-bottom: 0.2rem;
+                text-align: center;
+            }
+            .big-phone-number {
+                font-size: 1.35rem;
+                padding: 0.25rem 0.9rem;
+                margin: 0 auto;
+                border-radius: 0.7rem;
+            }
+            .big-phone-texts {
+                min-width: 0;
+                margin-bottom: 0.1rem;
+            }
+        }
+        .contact-address {
+            margin-top: 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            font-size: 1.15rem;
+            color: #223046;
+            background: #f7fafd;
+            border-radius: 12px;
+            padding: 1.1rem 1.5rem;
+            box-shadow: 0 2px 10px rgba(44,62,80,0.06);
+        }
+        .contact-address i {
+            color: #2d9cdb;
+            font-size: 1.3rem;
+        }
+    </style>
+</body>
+</html> 

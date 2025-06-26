@@ -212,6 +212,9 @@ function setupDropdownMenuPanel() {
   const tedavilerToggle = document.getElementById('dropdownTedavilerToggle');
   const tedavilerSubmenu = document.getElementById('dropdownTedavilerSubmenu');
 
+  // Eğer panel veya trigger yoksa fonksiyonu sonlandır
+  if (!trigger || !panel) return;
+
   function closePanel() {
     panel.classList.remove('open');
     if (tedavilerSubmenu) tedavilerSubmenu.classList.remove('open');
@@ -244,6 +247,7 @@ function setupDropdownMenuPanel() {
     if (e.key === 'Escape') closePanel();
   });
   // Menüdeki bir linke tıklanınca menü kapanır
+  if (!panel) return;
   panel.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closePanel);
   });
